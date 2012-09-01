@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-JP">
+<head>
+<META http-equiv="content-type" CONTENT="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jkl-dumper.js"></script> 
+<script type="text/javascript" src="js/mousewheel.js"></script>
+<script type="text/javascript" src="js/mapbox.js"></script>
+
+<style type="text/css">
+
+#viewport {
+	MARGIN: 0px auto; 
+	OVERFLOW: hidden; 
+	WIDTH: 800px; 
+	/*CURSOR: move;*/
+	HEIGHT: 1056px
+}
+
+.map-control {
+position: absolute;
+top: 30px;
+right: 10px;
+height: 63px;
+width: 100px;
+}
+</style>
+</head>
+
+<body>
+
+
+
+<DIV class="mapwrapper">
+
+<DIV class="map-control">
+<a href="#left" class="left">Left</a>
+<a href="#right" class="right">Right</a>
+<a href="#up" class="up">Up</a>
+<a href="#down" class="down">Down</a>
+<a href="#zoom" class="zoom">Zoom</a>
+<a href="#zoom_out" class="back">Back</a>
+</DIV>
+
+<DIV id="viewport">
+<DIV style="BACKGROUND: url(images/findcore.sort72.png) no-repeat; WIDTH: 800px; HEIGHT:2100px"></DIV>
+
+<DIV style="WIDTH: 2777px; HEIGHT: 7291px">
+<IMG name="img2" alt="" src="images/findcore.sort250.png">
+<DIV class="mapcontent"></DIV>
+</DIV>
+
+<DIV style="WIDTH: 5000px; HEIGHT: 13125px">
+<map name="map_1" id="map_1">
+<area shape="rect" coords="388,350,432,698" href="http://www.yahoo.co.jp" alt="" target="_blank">
+<area shape="rect" coords="432,350,476,698" href="" alt="" target="_blank">
+<area shape="rect" coords="476,350,520,698" href="" alt="" target="_blank">
+<area shape="rect" coords="520,350,564,698" href="" alt="" target="_blank">
+<area shape="rect" coords="564,350,608,698" href="" alt="" target="_blank">
+<area shape="rect" coords="608,350,652,698" href="" alt="" target="_blank">
+<area shape="rect" coords="652,350,696,698" href="" alt="" target="_blank">
+<area shape="rect" coords="696,350,740,698" href="" alt="" target="_blank">
+<area shape="rect" coords="740,350,784,698" href="" alt="" target="_blank">
+<area shape="rect" coords="784,350,828,698" href="" alt="" target="_blank">
+<area shape="rect" coords="828,350,872,698" href="" alt="" target="_blank">
+<area shape="rect" coords="872,350,916,698" href="" alt="" target="_blank">
+<area shape="rect" coords="916,350,960,698" href="" alt="" target="_blank">
+<area shape="rect" coords="960,350,1004,698" href="" alt="" target="_blank">
+<area shape="rect" coords="1004,350,1048,698" href="" alt="" target="_blank">
+</map>
+<IMG name="img4" alt="" usemap="map_1" src="images/findcore.sort450.png">
+
+
+<DIV class="mapcontent" id="max" name="max" usemap="map_1"></DIV>
+</DIV>
+</DIV>
+</DIV>
+
+
+
+<SCRIPT type=text/javascript>
+$(document).ready(function() {
+$("#viewport").mapbox({
+afterZoom: function(layer, xcoord, ycoord, viewport) {
+console.log('layer='+layer.getAttribute("class"));
+layer.setAttribute("usemap", "#map_1");
+},
+mousewheel: true,
+});
+})
+</SCRIPT>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-JP">
+<head>
+<META http-equiv="content-type" CONTENT="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jkl-dumper.js"></script> 
+<script type="text/javascript" src="js/imagepanner.js">
+/***********************************************
+* Simple Image Panner and Zoomer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+<style type="text/css">
+
+/*Default CSS for pan containers*/
+.pancontainer{
+position:relative; /*keep this intact*/
+overflow:hidden; /*keep this intact*/
+width:300px;
+height:300px;
+border:1px solid black;
+
+}
+</style>
+</head>
+
+<body>
+<map name="map_1">
+<area shape="rect" coords="388,350,432,698" href="" alt="" target="_blank">
+<area shape="rect" coords="432,350,476,698" href="" alt="" target="_blank">
+<area shape="rect" coords="476,350,520,698" href="" alt="" target="_blank">
+<area shape="rect"  coords="520,350,564,698" href="" alt="" target="_blank">
+</map>
+<div class="pancontainer" data-orient="center" data-canzoom="yes" style="width:400px; height:300px;">
+<IMG name="img4" alt="" usemap="#map_1" src="images/findcore.sort450.png" style="WIDTH: 5000px; HEIGHT: 13125px">
+<!--<img src="http://i44.tinypic.com/1hezvm.jpg" style="width:700px; height:525px" />-->
+</div>
+
+
+</body>
+</html>
