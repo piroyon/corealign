@@ -60,7 +60,7 @@
   });
  </script>
 
-<h2>CoreAlign Zoomable Map</h2>
+<h1>jQuery zoomable plugin</h1>
   <p>
 
     <input type="button" value="+" onclick="$('#findcore').zoomable('zoomIn')" title="Zoom in" />
@@ -82,7 +82,7 @@ if(isset($_GET['tabid'])){
 	echo "$imagesrc";
 	echo "\">";
 	echo "<map name=\"map_1\" id=\"map_1\">";
-	$contents = @file_get_contents("maps/$tabid.map");
+	$contents = @file_get_contents("images/$tabid.map");
 	echo $contents;
 	echo "</map>";
 } else {
