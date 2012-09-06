@@ -17,6 +17,12 @@
 	zoom: 1; 
 	overflow: visible; 
 } /* the overflow property removes extra width in IE */
+#showimage {
+    width: 800px;
+    height: 1056px;
+	overflow: hidden;
+	position: relative;
+}
 </style>
 </head>
 
@@ -35,7 +41,7 @@
 			if ( typeof imgObj.naturalWidth !== 'undefined' ) {  // for Firefox, Safari, Chrome
 				w = imgObj.naturalWidth;
 				h = imgObj.naturalHeight;
-				console.log('hei3='+h);
+				//console.log('hei3='+h);
 			} else if ( typeof imgObj.runtimeStyle !== 'undefined' ) {    // for IE
         		var run = imgObj.runtimeStyle;
         		var mem = { w: run.width, h: run.height };  // keep runtimeStyle
@@ -70,10 +76,9 @@
     <input type="button" value="Reset" onclick="$('#findcore').zoomable('reset')" />
 
   </p>
-
-  <div style="overflow:hidden;width:800px;height:1056px;position:relative;">
-
-<!-- <img src="images/imagemap.png" usemap="#map" id="image" alt="Demo image for zoomable jQuery plugin" />-->
+  
+  <div id="showimage">&nbsp;
+	  
 <?php
 if(isset($_GET['tabid'])){
 	$tabid = $_GET['tabid'];
@@ -89,22 +94,7 @@ if(isset($_GET['tabid'])){
 	echo  '<h3>Please set tabid</h3>';
 }
 ?>
-
-<!--<IMG name="img4" alt="" id="findcore" usemap="#map_1" width="2400" height="6300"  src=<php? $imagesrc ?>>-->
-
-
-  </div>
-
-
-
- <br />
- <br />
- <br />
- <br />
-
-
- </div>
-
- </div>
+</div>
+<br><br>
  </body>
  </html>
